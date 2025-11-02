@@ -12,14 +12,14 @@ export function genCoef() {
 	const a = random.int(1, 1000);
 	let coef: number;
 
-	if (a <= 800) {
-		// 80%: 1.77x – 3.22x
+	if (a <= 500) {
+		// 50%: 1.77x – 3.22x
 		coef = random.int(177, 322) / 100;
-	} else if (a <= 950) {
-		// 15%: 3.23x – 7.99x
+	} else if (a <= 850) {
+		// 35%: 3.23x – 7.99x
 		coef = random.int(323, 799) / 100;
 	} else {
-		// 5%: 8.00x – 15.99x
+		// 15%: 8.00x – 15.99x
 		coef = random.int(800, 1599) / 100;
 	}
 
