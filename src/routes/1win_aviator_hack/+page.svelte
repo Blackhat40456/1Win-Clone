@@ -111,14 +111,7 @@
   $: if (data?.usr && !showNotice) {
     displayNotice();
   }
-  
-  // 👇 Cleanup timer on component destroy
-  onMount(() => {
-    return () => {
-      if (timer) clearInterval(timer);
-      if (noticeTimer) clearTimeout(noticeTimer);
-    };
-  });
+  // ✅ REMOVED onMount block to avoid import error
 </script>
 
 <svelte:head>
@@ -250,7 +243,6 @@
     return async ({ result, update }) => {
       await update();
       isVerifying = false;
-      // Show notice after successful verification
       if (result?.type === 'success' && data?.usr) {
         displayNotice();
       }
