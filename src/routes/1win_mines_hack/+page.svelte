@@ -37,7 +37,6 @@
       showNotice = true;
       localStorage.setItem('mines_notice_last', Date.now().toString());
       
-      // Auto-close after 10 seconds
       noticeTimer = setTimeout(() => {
         showNotice = false;
       }, 10000);
@@ -124,6 +123,21 @@
   </div>
 {/if}
 
+<!-- 👇 Floating Rules Button (Glassy Transparent) -->
+{#if data?.usr}
+  <button 
+    on:click={displayNotice}
+    class="fixed bottom-4 right-4 z-40 flex items-center gap-2 px-4 py-2.5 bg-white/10 backdrop-blur-md border border-cyan-400/30 rounded-xl text-cyan-300 hover:text-white hover:bg-white/20 hover:border-cyan-300/50 transition-all duration-300 shadow-lg shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 animate-pulse-once"
+    aria-label="View game rules"
+    title="Show Rules"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <span class="font-semibold text-sm" style="font-family: 'Orbitron', monospace;">Rules</span>
+  </button>
+{/if}
+
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div role="button" tabindex="-1" class="top-banner {hideTitle ? 'hidden' : ''}" on:click={function(){let c = (parseInt(this.dataset.count) || 0) + 1; this.dataset.count = c; if (c > 3) {hideTitle = true}}}>REDHAT 1winHACK BOT</div>
 
@@ -196,7 +210,6 @@
     return async ({ result, update }) => {
       await update();
       isVerifying = false;
-      // Show notice after successful verification
       if (result?.type === 'success' && data?.usr) {
         displayNotice();
       }
@@ -315,9 +328,17 @@
     to { width: 0%; }
   }
   
+  /* 👇 Rules Button Animation */
+  @keyframes pulseOnce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
   .animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
   .animate-slideUp { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
   .animate-progress { animation: progress linear forwards; }
+  .animate-pulse-once { animation: pulseOnce 0.5s ease-out 1s forwards; }
   
   /* Glass effect enhancement */
   .backdrop-blur-md {
