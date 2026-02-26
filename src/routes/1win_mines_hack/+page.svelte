@@ -18,7 +18,7 @@
   
   let hideTitle = false;
   
-  // 👇 Check if notice should show (45 min interval)
+  // 👇 Check if notice should show (45 min interval) - FOR AUTO-SHOW ONLY
   function shouldShowNotice() {
     if (typeof window === 'undefined') return false;
     const lastShown = localStorage.getItem('mines_notice_last');
@@ -31,7 +31,7 @@
     return false;
   }
   
-  // 👇 Show notice with auto-close
+  // 👇 Auto-show notice after login (respects 45-min timer)
   function displayNotice() {
     if (shouldShowNotice()) {
       showNotice = true;
@@ -41,6 +41,16 @@
         showNotice = false;
       }, 10000);
     }
+  }
+  
+  // 👇 NEW: Manual show rules (ALWAYS shows, ignores timer)
+  function showRulesManual() {
+    showNotice = true;
+    if (noticeTimer) clearTimeout(noticeTimer);
+    
+    noticeTimer = setTimeout(() => {
+      showNotice = false;
+    }, 10000);
   }
   
   // 👇 Manual close handler
@@ -126,7 +136,7 @@
 <!-- 👇 Floating Rules Button (Glassy Transparent) -->
 {#if data?.usr}
   <button 
-    on:click={displayNotice}
+    on:click={showRulesManual}
     class="fixed bottom-4 right-4 z-40 flex items-center gap-2 px-4 py-2.5 bg-white/10 backdrop-blur-md border border-cyan-400/30 rounded-xl text-cyan-300 hover:text-white hover:bg-white/20 hover:border-cyan-300/50 transition-all duration-300 shadow-lg shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-400 animate-pulse-once"
     aria-label="View game rules"
     title="Show Rules"
