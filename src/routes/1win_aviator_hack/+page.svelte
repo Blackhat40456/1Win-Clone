@@ -117,7 +117,7 @@
 <svelte:head>
   <title>1Win Aviator Hack</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&display=swap');
   </style>
 </svelte:head>
 
@@ -151,12 +151,12 @@
       </div>
       
       <!-- Title -->
-      <h3 id="notice-title" class="text-center text-xl font-bold text-white mb-3" style="font-family: 'Orbitron', monospace;">
+      <h3 id="notice-title" class="text-center text-xl font-bold text-white mb-3" style="font-family: 'Rubik', sans-serif; font-weight: 900;">
         ⚠️ Important Rules
       </h3>
       
       <!-- Message -->
-      <p class="text-cyan-100 text-center leading-relaxed" style="font-family: 'Orbitron', monospace;">
+      <p class="text-cyan-100 text-center leading-relaxed" style="font-family: 'Rubik', sans-serif; font-weight: 700;">
         Minimum bet: <span class="text-cyan-300 font-semibold">$5</span>. 
         <br class="sm:hidden"/>
         Place your bet first, then click <span class="text-amber-300 font-semibold">"Start Signal"</span>. 
@@ -188,7 +188,7 @@
     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
-    <span class="font-semibold text-sm" style="font-family: 'Orbitron', monospace;">Rules</span>
+    <span class="font-semibold text-sm" style="font-family: 'Rubik', sans-serif; font-weight: 700;">Rules</span>
   </button>
 {/if}
 
@@ -199,7 +199,7 @@
 <div class="hack-text">HACK</div>
 
 {#if data.usr}
-  <div class="text-center text-white text-lg" style="font-family: 'Orbitron', monospace;">
+  <div class="text-center text-white text-lg" style="font-family: 'Rubik', sans-serif; font-weight: 700;">
     Logged in as:
     <span class="text-[#00f0ff] text-shadow-cyan-600 text-shadow-md">
       User - {hideUserID(data.usr)}
@@ -227,7 +227,7 @@
   }}>
     <div class="text-white text-center">{delayText}</div>
     <button id="sigFormBtn" type="submit" class="hidden" aria-label="submit"></button>
-    <button disabled={inRequest} type="button" class="block w-[350px] mx-auto py-3 my-5 rounded-xl text-2xl text-white font-bold cursor-pointer hover:saturate-150 active:scale-75 transition duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-30 shadow hover:shadow-cyan-400 scale-90" style="background: linear-gradient(93.73deg,#108de7,#0855c4);font-family: 'Orbitron', monospace;" on:click={()=>{loopStarted ? (()=>{document.querySelector('#sigFormBtn')?.click();timeRemains = 60})() : startSignalLoop()}}>{loopStarted ? 'Refresh Signal' : 'Start Signal'}</button>
+    <button disabled={inRequest} type="button" class="block w-[350px] mx-auto py-3 my-5 rounded-xl text-2xl text-white font-bold cursor-pointer hover:saturate-150 active:scale-75 transition duration-300 ease-out disabled:cursor-not-allowed disabled:opacity-30 shadow hover:shadow-cyan-400 scale-90" style="background: linear-gradient(93.73deg,#108de7,#0855c4);font-family: 'Rubik', sans-serif; font-weight: 900;" on:click={()=>{loopStarted ? (()=>{document.querySelector('#sigFormBtn')?.click();timeRemains = 60})() : startSignalLoop()}}>{loopStarted ? 'Refresh Signal' : 'Start Signal'}</button>
     {#if timeRemains}
       <div class="max-w-[350px] w-[calc(100%-30px)] h-5 mx-auto rounded-2xl bg-cyan-950 relative overflow-hidden">
         <div role="progressbar" class="w-full h-full bg-cyan-700 transition ease-out duration-300" style="transform: translateX({timeRemains/60*100 - 100}%);"></div>
@@ -237,7 +237,7 @@
   </form>
 
 {:else}
-  <form class="flex max-w-[300px] mx-auto py-7 flex-col gap-5" style="font-family: 'Orbitron', monospace;" action="?/verifyUID" method="post" use:enhance={()=>{
+  <form class="flex max-w-[300px] mx-auto py-7 flex-col gap-5" style="font-family: 'Rubik', sans-serif; font-weight: 700;" action="?/verifyUID" method="post" use:enhance={()=>{
     form = undefined;
     isVerifying = true;
     return async ({ result, update }) => {
@@ -259,7 +259,7 @@
   </form>
   
   {#if form?.verified == false}
-    <div role="alert" class="verify-alert max-w-md w-[calc(100%-40px)] mx-auto my-6 bg-gradient-to-br from-cyan-900/80 to-slate-900/80 backdrop-blur-sm border border-cyan-400/40 rounded-2xl p-5 shadow-xl shadow-cyan-500/10" style="font-family: 'Orbitron', monospace;">
+    <div role="alert" class="verify-alert max-w-md w-[calc(100%-40px)] mx-auto my-6 bg-gradient-to-br from-cyan-900/80 to-slate-900/80 backdrop-blur-sm border border-cyan-400/40 rounded-2xl p-5 shadow-xl shadow-cyan-500/10" style="font-family: 'Rubik', sans-serif; font-weight: 700;">
       
       <!-- Header Section -->
       <div class="flex items-center gap-3 mb-4 pb-3 border-b border-cyan-400/20">
@@ -300,6 +300,7 @@
           href="https://1win.com/deposit" 
           target="_blank"
           class="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 active:scale-[0.98]"
+          style="font-family: 'Rubik', sans-serif; font-weight: 900;"
         >
           💰 Deposit Now & Unlock Signals
         </a>
@@ -323,8 +324,8 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'Orbitron', monospace;
-    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-size: 20px;
     letter-spacing: 2px;
     color: #00f0ff;
@@ -348,8 +349,8 @@
   }
   
   .hack-text {
-    font-family: 'Orbitron', monospace;
-    font-weight: 800;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
     font-size: 22px;
     letter-spacing: 4px;
     background: linear-gradient(90deg, #00f0ff, #0088ff, #00f0ff);
