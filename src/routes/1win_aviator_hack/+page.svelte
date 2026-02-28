@@ -195,7 +195,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div role="button" tabindex="-1" class="top-banner {hideTitle ? 'hidden' : ''}" on:click={function(){let c = (parseInt(this.dataset.count) || 0) + 1; this.dataset.count = c; if (c > 3) {hideTitle = true}}}>AVIATOR PREDICTOR</div>
 
-<img class="logo mx-auto {hideTitle ? 'mt-6' : 'mt-20'} mb-3 rounded-full w-24 h-24" src="https://iili.io/FKNWLwQ.png" alt="Logo">
+<img class="logo mx-auto {hideTitle ? 'mt-6' : 'mt-20'} mb-3 rounded-full w-24 h-24" src="https://iili.io/FKNWLwQ.png  " alt="Logo">
 <div class="hack-text">HACK</div>
 
 {#if data.usr}
@@ -259,54 +259,55 @@
   </form>
   
   {#if form?.verified == false}
-  <div role="alert" class="verify-alert max-w-md w-[calc(100%-40px)] mx-auto my-6 bg-gradient-to-br from-cyan-900/80 to-slate-900/80 backdrop-blur-sm border border-cyan-400/40 rounded-2xl p-5 shadow-xl shadow-cyan-500/10" style="font-family: 'Orbitron', monospace;">
-    
-    <!-- Header Section -->
-    <div class="flex items-center gap-3 mb-4 pb-3 border-b border-cyan-400/20">
-      <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center">
-        <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-        </svg>
+    <div role="alert" class="verify-alert max-w-md w-[calc(100%-40px)] mx-auto my-6 bg-gradient-to-br from-cyan-900/80 to-slate-900/80 backdrop-blur-sm border border-cyan-400/40 rounded-2xl p-5 shadow-xl shadow-cyan-500/10" style="font-family: 'Orbitron', monospace;">
+      
+      <!-- Header Section -->
+      <div class="flex items-center gap-3 mb-4 pb-3 border-b border-cyan-400/20">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center">
+          <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-white">⚠️ Account Setup Required</h3>
       </div>
-      <h3 class="text-lg font-bold text-white">⚠️ Account Setup Required</h3>
+      
+      <!-- Body Content - Structured Points -->
+      <div class="space-y-3 text-cyan-100 text-sm leading-relaxed">
+        
+        <!-- Point 1: Current Status -->
+        <div class="flex items-start gap-2">
+          <span class="text-cyan-300 mt-0.5">•</span>
+          <p>Your account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
+        </div>
+        
+        <!-- Point 2: Benefit Highlight -->
+        <div class="flex items-start gap-2">
+          <span class="text-cyan-300 mt-0.5">•</span>
+          <p>Deposit <span class="text-emerald-400 font-bold">$20+</span> and get up to <span class="text-emerald-400 font-bold">500% bonus</span> 🎁</p>
+        </div>
+        
+        <!-- Point 3: Clear Expectation -->
+        <div class="flex items-start gap-2">
+          <span class="text-cyan-300 mt-0.5">•</span>
+          <p>Signals will auto-unlock instantly after successful deposit.</p>
+        </div>
+        
+      </div>
+      
+      <!-- Action Button -->
+      <div class="mt-5 pt-3 border-t border-cyan-400/20">
+        <a 
+          href="https://1win.com/deposit" 
+          target="_blank"
+          class="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 active:scale-[0.98]"
+        >
+          💰 Deposit Now & Unlock Signals
+        </a>
+        <p class="text-center text-cyan-300/60 text-xs mt-2">🔒 Secure • Instant Activation</p>
+      </div>
+      
     </div>
-    
-    <!-- Body Content - Structured Points -->
-    <div class="space-y-3 text-cyan-100 text-sm leading-relaxed">
-      
-      <!-- Point 1: Current Status -->
-      <div class="flex items-start gap-2">
-        <span class="text-cyan-300 mt-0.5">•</span>
-        <p>Your 1win account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
-      </div>
-      
-      <!-- Point 2: Benefit Highlight -->
-      <div class="flex items-start gap-2">
-        <span class="text-cyan-300 mt-0.5">•</span>
-        <p>Deposit <span class="text-emerald-400 font-bold">$20+</span> and get up to <span class="text-emerald-400 font-bold">500% bonus</span> 🎁</p>
-      </div>
-      
-      <!-- Point 3: Clear Expectation -->
-      <div class="flex items-start gap-2">
-        <span class="text-cyan-300 mt-0.5">•</span>
-        <p>Signals will auto-unlock instantly after successful deposit.</p>
-      </div>
-      
-    </div>
-    
-    <!-- Action Button -->
-    <div class="mt-5 pt-3 border-t border-cyan-400/20">
-      <a 
-        href="https://1win.com/deposit" 
-        target="_blank"
-        class="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 active:scale-[0.98]"
-      >
-        💰 Deposit Now & Unlock Signals
-      </a>
-      <p class="text-center text-cyan-300/60 text-xs mt-2">🔒 Secure • Instant Activation</p>
-    </div>
-    
-  </div>
+  {/if}
 {/if}
 
 <style lang="postcss">
