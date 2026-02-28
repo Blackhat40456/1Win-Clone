@@ -277,7 +277,7 @@
         <!-- Point 1: Current Status -->
         <div class="flex items-start gap-2">
           <span class="text-cyan-300 mt-0.5">•</span>
-          <p>Your account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
+          <p>Your 1win account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
         </div>
         
         <!-- Point 2: Benefit Highlight -->
@@ -289,7 +289,7 @@
         <!-- Point 3: Clear Expectation -->
         <div class="flex items-start gap-2">
           <span class="text-cyan-300 mt-0.5">•</span>
-          <p>Signals will auto-unlock instantly after successful deposit.</p>
+          <p>Signals will auto-unlock instantly after successful deposit 10$ or more.</p>
         </div>
         
       </div>
@@ -297,7 +297,7 @@
       <!-- Action Button -->
       <div class="mt-5 pt-3 border-t border-cyan-400/20">
         <a 
-          href="https://1win.com/deposit" 
+          href="https://1win.com/" 
           target="_blank"
           class="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-sm hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 active:scale-[0.98]"
           style="font-family: 'Rubik', sans-serif; font-weight: 900;"
