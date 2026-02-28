@@ -240,10 +240,10 @@
       <b>⚠️ Attention Needed: No Deposit Found!</b>
       <br>
       It looks like your 1win account doesn't have any funds yet.
-      To unlock signal access, a minimum deposit of <b>$5</b> is required.
+      To unlock signal access, a minimum deposit of <b>$10</b> is required.
       <br>
       🚫 <b>Signals remain inaccessible until a deposit is made.</b>
-      💸 <b>Deposit $15 or more</b> and receive up to <b>500% bonus</b> on your main account!
+      💸 <b>Deposit $20 or more</b> and receive up to <b>500% bonus</b> on your main account!
       <br>
       👉 <b>No deposit means no signals.</b>
       <br>
