@@ -277,7 +277,7 @@
       <!-- Point 1: Current Status -->
       <div class="flex items-start gap-2">
         <span class="text-cyan-300 mt-0.5">•</span>
-        <p>Your account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
+        <p>Your 1win account needs a minimum deposit of <span class="text-amber-300 font-semibold">$10</span> to activate signals.</p>
       </div>
       
       <!-- Point 2: Benefit Highlight -->
